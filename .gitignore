@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+
+# Local / Debug
+.local
+.vscode
+*.i
+*.ii
+*.s
+vgcore.*
+txt_file_indexer
