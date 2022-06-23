@@ -11,7 +11,7 @@ J'ai développé et testé ce projet sous Manjaro 21.3.0. N'ayant pas beaucoup d
 
 N'ayant pas le droit aux containers de la STL, ceci m'a mis un doute concernant le droit d'utiliser des smart pointers. N'étant pas certain que ces derniers soient autorisés j'ai préféré ne pas les utiliser. Cependant, j'ai ajouté un commentaire titré `Info` à l'endroit où leur utilisation aurait été nécessaire pour des questions de performance notamment.
 
-Le dossier `lib` est un sous module git. Cette lib est ma librairie personnelle avec quelques modifications pour fonctionner en C++. Malgré le fait que je n'ai pas utilisé d'avantages de fonctionnalités de `GIT`, ce projet a été créé dans le but de pouvoir être maintenu avec ce dernier.
+Le dossier `lib` est un sous module git. Cette lib est[ma librairie personnelle](https://github.com/Guerout-Arnaud/C_Lib) avec quelques modifications pour fonctionner en C++. Malgré le fait que je n'ai pas utilisé d'avantages de fonctionnalités de `GIT`, ce projet a été créé dans le but de pouvoir être maintenu avec ce dernier.
 
 La documentation peut être entirèrement générée via [Doxygen](https://doxygen.nl/). Depuis la racine du projet effectuer la commande `doxygen ./doc/Doxyfile`. N'ayant pas d'indication quant à la langue devant être utilisée pour les commentaires, la documentation a été rédigée en anglais afin d'être compréhensible par le plus grand nombre. Cela confirme également ma capacité à lire (et rédiger) de la documentation technique en anglais comme demandé dans l'offre de poste.
 
