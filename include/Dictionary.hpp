@@ -29,6 +29,7 @@
              *      size. On each extention the capacity is increased by
              *      ADDED_CAPACITY. DEFAULT_CAPACITY and ADDED_CAPACITY are both
              *      Macro and can be redefine at compile time.
+             * @throw std::bad_alloc if the memory allocation fails.
              */
             Dictionary();
             // Dictionary(const Dictionary &inital);
@@ -45,21 +46,31 @@
              */
             void add(std::string &word, const std::string &fileName);
 
-
-            Index search(const std::string &word);
+            /**
+             * @brief This method allows you to get the Index of the researched word
+             *
+             * @throw runtime_error if the word is not found.
+             * @param word (const std::string &) The word to search for
+             * @return const Index & The Index of the word
+             */
+            const Index &search(const std::string &word) const;
 
         protected:
 
         private:
+        /*
+            Old Idea. Left here to keep track of thought process.
+
             // typedef struct index_list_s {
                 // Index index;
                 // linked_list_t list;
             // } index_list_t;
+            // index_list_s *_pool;
+        */
 
             unsigned int _capacity;
             unsigned int _size;
             Index *_data;
-            // index_list_s *_pool;
 
             /**
              * @brief Add a new word to the Dictionary
@@ -76,6 +87,7 @@
              * @details This function is used to expand the capacity of the
              *     Dictionary to capacity + ADDED_CAPACITY. Once the capacity
              *    is expanded all Index are .
+             * @throw std::bad_alloc if the memory allocation fails.
              */
             void expand();
 

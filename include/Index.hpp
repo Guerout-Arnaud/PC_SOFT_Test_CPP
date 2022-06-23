@@ -100,8 +100,3 @@
     };
 
 #endif
-
-/*
-No use for now
-Index(int index, Word &word): _index(index), _word(word), _files_list(nullptr) {}
-*/

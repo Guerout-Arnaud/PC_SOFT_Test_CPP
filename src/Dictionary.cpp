@@ -8,6 +8,8 @@ Dictionary::Dictionary(): _capacity(DEFAULT_CAPACITY), _size(0), _data(nullptr)
 
     if (_data == nullptr)
     {
+        /* Info : not catch anywhere, if this fails, the software cannot run at all
+        I decided that the software should stop to avoid errors */
         throw std::bad_alloc();
     }
 }
@@ -92,7 +94,7 @@ void Dictionary::add(Index &index)
     }
 }
 
-Index Dictionary::search(const std::string &word)
+const Index &Dictionary::search(const std::string &word) const
 {
     unsigned int w_hash = Word::hash(word);
 
@@ -108,8 +110,9 @@ void Dictionary::expand()
 {
     Index *tmp = new Index[_capacity + ADDED_CAPACITY];
 
-
     if (tmp == nullptr) {
+        /* Info : not catch anywhere, if this fails, I decided that the software should
+        stop to avoid errors */
         throw std::bad_alloc();
     }
 

@@ -49,6 +49,7 @@ int main(int argc, char **argv)
     std::cout << "Fetching all words, please wait. This may take a while if you have huge files" << std::endl;
 
 
+    /* Info : Throwable upon memory allocation */
     Dictionary dictionary = Dictionary();
 
     unsigned int progress = 0;
@@ -68,7 +69,9 @@ int main(int argc, char **argv)
             {
                 std::transform(word.begin(), word.end(), word.begin(), [](unsigned char c){ return std::tolower(c); });
 
+                /* Info : Throwable upon memory allocation */
                 dictionary.add(word, entry.path().string());
+
                 // std::cout << word << std::endl;
                 // std::cout << std::endl;
             }
@@ -78,14 +81,8 @@ int main(int argc, char **argv)
         }
 
         progress_bar(++progress, totalFiles);
-        // std::cout << "Progress: ["
-        // for (int i = 0;  ) << (progress * 100) / totalFiles << "%" << std::endl;
     }
     std::cout << std::endl;
-
-    // return (0);
-    // Index i = dictionary.search("document").getFiles();
-
 
     std::string userInput = "";
     std::cout << "Please enter the word you want to search for. Your word will be transform to lower case anyway. (Ctrl+D to exit): ";
@@ -97,7 +94,7 @@ int main(int argc, char **argv)
         try {
             Index i = dictionary.search(userInput);
             std::cout << "Here are all the file containing \"" << userInput << "\":\n[" << i.getFiles() << "]" << std::endl;
-        } catch (std::exception &e) {
+        } catch (std::runtime_error &) {
             std::cout << "Word \"" << userInput << "\" not found" << std::endl;
         }
         std::cout << "\nPlease enter the word you want to search for (your word will be transform to lower case): ";

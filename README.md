@@ -1,20 +1,20 @@
 # PC_SOFT_Test_CPP
 
 ## Contexte
-Pour ce test, j'ai choisi de faire le suject conseille: le sujet 1.
+Pour ce test, j'ai décidé de faire le sujet conseillé: le sujet 1.
 
-La documentation peut etre entirerement generee via Doxygene. Depuis la racine du projet effectuer la commande `doxygen ./doc/Doxyfile`. N'ayany pas d'indication quant a la langue des commentaires, la documentation a ete rediger en anglais afin d'etre comprehensible par le plus grand nombre. Cela confirme egalement ma capaciter a lire (et rediger) de la documentation technique en anglais comme demande dans l'offre de poste.
+J'ai choisi d'utiliser g++ couplé à un Makefile pour la compilation, ces derniers étant utilisés dans la grande majorité de mes projets.
 
-Le dossier `lib` est un sous module git. Cette lib est ma librairie personelle avec quelques modifications pour fonctionner en C++. Malgre le fait que je n'ai pas utilise d'avantages de fonctionnalites de git, ce projet a ete creer dans le but de pouvoir etre maintenu avec ce dernier.
+Pour ce qui est du debug ainsi que des fuites de mémoire, j'ai préféré utiliser valgrind.
 
-N'ayant pas le droit aux containers de la STL, ceci m'a mis un doute concernant l'utilisation des smart pointer. N'etant pas certain que ces derniers soient autorises j'ai prefere ne pas les utiliser. Cependant j'ai ajouter un commentaire titre `Info` a l'endroit ou leur utilisation aurait ete necessaire pour des questions de performance notamment.
+J'ai développé et testé ce projet sous Manjaro 21.3.0. N'ayant pas beaucoup d'expérience en développement Windows et Make étant difficilement compatible, je n'ai pas eu l'occasion de tester sur cet environnement.
 
-J'ai choisis d'utiliser g++ couple a un Makefile pour la compilation, ces derniers etant utilises dans la grande majorites de mes projets.
+N'ayant pas le droit aux containers de la STL, ceci m'a mis un doute concernant le droit d'utiliser des smart pointers. N'étant pas certain que ces derniers soient autorisés j'ai préféré ne pas les utiliser. Cependant, j'ai ajouté un commentaire titré `Info` à l'endroit où leur utilisation aurait été nécessaire pour des questions de performance notamment.
 
-Pour ce qui est du debug ainsi que des memory leak, j'ai prefere utiliser valgrind.
+Le dossier `lib` est un sous module git. Cette lib est ma librairie personnelle avec quelques modifications pour fonctionner en C++. Malgré le fait que je n'ai pas utilisé d'avantages de fonctionnalités de `GIT`, ce projet a été créé dans le but de pouvoir être maintenu avec ce dernier.
 
-J'ai developpe et teste ce projet sur une machine Manjaro 21.3.0
-N'ayant pas beaucoup d'experience en developpement Windows et Make etant difficilement compatible, je n'ai pas eu l'occasion de tester sur cet environnement.
+La documentation peut être entirèrement générée via [Doxygen](https://doxygen.nl/). Depuis la racine du projet effectuer la commande `doxygen ./doc/Doxyfile`. N'ayant pas d'indication quant à la langue devant être utilisée pour les commentaires, la documentation a été rédigée en anglais afin d'être compréhensible par le plus grand nombre. Cela confirme également ma capacité à lire (et rédiger) de la documentation technique en anglais comme demandé dans l'offre de poste.
+
 <br/>
 <br/>
 
