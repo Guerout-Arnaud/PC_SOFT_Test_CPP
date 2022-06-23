@@ -1,10 +1,20 @@
 #ifndef DICTIONARY_HPP_
     #define DICTIONARY_HPP_
 
+
+    /**
+     * @brief Default size of the Dictionary
+     * @details This value is use upon creation of the Dictionary. It's not
+     * random, it has been selected because it's either a pow of 2 and a close
+     * to the average number of word in a docuemnt.
+     */
     #ifndef DEFAUTL_CAPACITY
         #define DEFAULT_CAPACITY 512
     #endif
 
+    /**
+     * @brief Size to add when the Dictionary gets extended
+     */
     #ifndef ADDED_CAPACITY
         #define ADDED_CAPACITY 64
     #endif

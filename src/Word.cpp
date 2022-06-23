@@ -56,7 +56,8 @@ const std::string Word::clean(std::string &word) const
     int to_remove = 0;
 
     for (auto c = word.cend() - 1; c != word.cbegin(); c--) {
-        if ((*c < '0' || *c > '9') && (*c < 'A' || *c > 'Z') && (*c < 'a' || *c > 'z')) {
+        if ((*c < '0' || *c > '9') && (*c < 'A' || *c > 'Z')
+            && (*c < 'a' || *c > 'z')) {
         to_remove++;
         } else {
             break;

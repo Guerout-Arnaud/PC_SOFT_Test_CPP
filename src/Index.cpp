@@ -6,7 +6,8 @@ Index::Index(): _nbFiles(0), _filesList(nullptr)
 {
 }
 
-Index::Index(std::string &word, const std::string &fileName): _word(word), _nbFiles(0), _filesList(nullptr)
+Index::Index(std::string &word, const std::string &fileName): _word(word),
+    _nbFiles(0), _filesList(nullptr)
 {
     addFile(fileName);
 };

@@ -28,7 +28,8 @@ Dictionary::~Dictionary()
 //     return *this;
 // }
 
-unsigned int Dictionary::addToFirstAvailable(unsigned int w_hash, unsigned int idx, std::string &word, const std::string &fileName)
+unsigned int Dictionary::addToFirstAvailable(unsigned int w_hash,
+    unsigned int idx, std::string &word, const std::string &fileName)
 {
     for (unsigned int i_hash = 0; idx < _capacity; idx++) {
         i_hash = _data[idx].getWord().getHash();
@@ -111,8 +112,8 @@ void Dictionary::expand()
     Index *tmp = new Index[_capacity + ADDED_CAPACITY];
 
     if (tmp == nullptr) {
-        /* Info : not catch anywhere, if this fails, I decided that the software should
-        stop to avoid errors */
+        /* Info : not catch anywhere, if this fails, I decided that
+            the software should stop to avoid errors */
         throw std::bad_alloc();
     }
 
